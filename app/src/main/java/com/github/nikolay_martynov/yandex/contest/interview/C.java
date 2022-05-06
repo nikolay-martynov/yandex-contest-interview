@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Статус 200.
  * Вам дан массив натуральных чисел a[i].
  * Найдите число таких пар элементов (a[i], a[j]), где ∣ a[i] − a[j] ∣ %200 == 0 и i < j.
  */
