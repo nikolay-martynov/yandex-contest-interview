@@ -23,8 +23,9 @@ public class C {
             pairsCache.add(0L);
             pairsCache.add(1L);
         }
-        if (pairsCache.size() > numbers)
+        if (pairsCache.size() > numbers) {
             return pairsCache.get(numbers);
+        }
         pairsCache.ensureCapacity(numbers);
         long result = pairs(numbers - 1) + numbers - 1;
         pairsCache.add(result);
@@ -32,6 +33,9 @@ public class C {
     }
 
     static long getNumberOfGoodPairs(int n, List<Integer> a) {
+        if (n != a.size()) {
+            throw new IllegalArgumentException();
+        }
         int count = 0;
         int[] mods = new int[200];
         for (int number : a) {
@@ -40,6 +44,20 @@ public class C {
         }
         for (int i = 0; i < 200; i++) {
             count += pairs(mods[i]);
+        }
+        return count;
+    }
+
+    static long naiveSolution(int n, List<Integer> a) {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i < j) {
+                    if (Math.abs(a.get(i) - a.get(j)) % 200 == 0) {
+                        count++;
+                    }
+                }
+            }
         }
         return count;
     }

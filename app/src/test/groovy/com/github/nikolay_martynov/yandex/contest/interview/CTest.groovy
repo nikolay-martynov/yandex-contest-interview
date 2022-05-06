@@ -71,11 +71,28 @@ class CTest extends Specification {
         expect:
         C.getNumberOfGoodPairs(a.size(), a) == c
         where:
-        a                           | c
-        [203, 404, 204, 200, 403]   | 2
-        [1000000]                   | 0
-        [2022, 2020, 2021]          | 0
-        [1, 2, 3, 3, 2, 1, 1, 2, 3] | 9
+        a                                                                    | c
+        [203, 404, 204, 200, 403]                                            | 2
+        [1000000]                                                            | 0
+        [2022, 2020, 2021]                                                   | 0
+        [1, 2, 3, 3, 2, 1, 1, 2, 3]                                          | 9
+        [201, 403, 605, 17, 805, 1003, 50017, 417, 617, 601, 101, 1101, 101] | 12
     }
+
+    def "same as naive"() {
+        given:
+        int n = 100000
+        List<Integer> numbers = new ArrayList<>(n)
+        Random random = new Random()
+        for (int i = 0; i < n; i++) {
+            numbers[i] = random.nextInt(5000)
+        }
+        when:
+        long naiveResult = C.naiveSolution(n, numbers)
+        long actualResult = C.getNumberOfGoodPairs(n, numbers)
+        then:
+        naiveResult == actualResult
+    }
+
 
 }
