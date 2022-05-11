@@ -7,3 +7,4 @@
 * A - это пробная задача на сложение двух чисел для ознакомления с тренажером
 * link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/B.java[B]. Card Counter
 * link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/C.java[C]. Статус 200
+* link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/D.java[D]. Matrix. Resurrection
