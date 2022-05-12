@@ -10,3 +10,5 @@
 * link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/D.java[D]. Matrix. Resurrection
 * link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/E.java[E]. Римлянин
 * link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/F.java[F]. Хорошие строки
+* link:app/src/main/java/com/github/nikolay_martynov/yandex/contest/interview/G.java[G]. Пути в дереве
+
